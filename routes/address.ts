@@ -24,6 +24,8 @@ export function getAddressById () {
   }
 }
 
+
+
 export function delAddressById () {
   return async (req: Request, res: Response) => {
     const address = await AddressModel.destroy({ where: { id: req.params.id, UserId: req.body.UserId } })
